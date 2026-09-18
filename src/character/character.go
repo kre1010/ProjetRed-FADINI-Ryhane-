@@ -1,4 +1,4 @@
-package red 
+package character 
 
 type Character struct {
 	Name string 
