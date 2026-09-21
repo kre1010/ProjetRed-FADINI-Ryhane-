@@ -1,10 +1,10 @@
-package character 
+package character
 
 type Character struct {
-	Name string 
+	Name  string
 	Class string
 	Level int
-	maxPv int 
-	Pv int
-	inv []string
+	maxPv int
+	Pv    int
+	inv   []string
 }
