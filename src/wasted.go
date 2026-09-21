@@ -28,3 +28,4 @@ func damage(p *character, amount int) {
 		fmt.Println(p.Name, "a", p.Health, "HP")
 	}
 }
+
