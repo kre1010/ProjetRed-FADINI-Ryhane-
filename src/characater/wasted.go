@@ -1,4 +1,8 @@
+<<<<<<< HEAD:src/characater/wasted.go
 package character
+=======
+package main
+>>>>>>> a4135417570d4d568b249dd2f6d52c774175d95f:src/wasted.go
 
 import "fmt"
 
