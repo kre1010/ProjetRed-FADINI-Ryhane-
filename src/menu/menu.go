@@ -39,14 +39,7 @@ func Menu() {
 		return
 
 	case 1:
-		nettoyer()
-		fmt.Println("========== NOUVELLE PARTIE ==========")
-		fmt.Println()
-		fmt.Println("Bienvenue dans une nouvelle partie !")
-		fmt.Println()
-		fmt.Println("Appuie sur Entrée pour revenir...")
-		fmt.Scanln()
-		fmt.Scanln()
+		NouvellePartie()
 
 	case 2:
 		nettoyer()
