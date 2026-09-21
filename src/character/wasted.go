@@ -2,13 +2,7 @@ package character
 
 import "fmt"
 
-type character struct {
-	Name  string
-	Pv    int
-	Alive bool
-}
-
-func Damage(c *character, amount int) {
+func Damage(c *Character, amount int) {
 
 	if !c.Alive {
 		fmt.Println(c.Name, "is already dead.")
@@ -26,10 +20,10 @@ func Damage(c *character, amount int) {
 }
 
 func main() {
-	player := character{
+	player := Character{
 		Name:  "c.class",
 		Pv:    100,
-		Alive: true,
+		
 	}
 	Damage(&player, 30)
 	Damage(&player, 50)
