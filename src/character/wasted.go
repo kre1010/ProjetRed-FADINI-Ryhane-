@@ -2,6 +2,7 @@ package character
 
 import "fmt"
 
+<<<<<<< HEAD
 type character struct {
 	Name   string
 	Health int
@@ -29,3 +30,20 @@ func damage(p *character, amount int) {
 	}
 }
 
+=======
+func Damage(c *Character, amount int) {
+
+	if c.Hp <= 0 {
+		fmt.Println(c.Name, "is already dead.")
+		return
+	}
+	c.Hp -= amount
+	if c.Hp <= 0 {
+		c.Hp = 0
+
+		fmt.Println(c.Name, "you died !")
+	} else {
+		fmt.Printf("%s has %d HP remaining.\n", c.Name, c.Hp)
+	}
+}
+>>>>>>> c5c2a9623efdfeb4b1b13f4df7fba70ce85f5624

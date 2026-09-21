@@ -10,7 +10,7 @@ type Character struct {
 	Level int
 	maxHp int
 	Hp    int
-	inv   map[string]int
+	Inv   map[string]int
 }
 
 func (c *Character) MenuInitCharacter() {
@@ -39,21 +39,21 @@ func (c *Character) InitCharacter(name string, class string) {
 		c.Level = 1
 		c.maxHp = 100
 		c.Hp = c.maxHp / 2
-		c.inv = map[string]int{"Sniper Rifle": 1, "Heavy Bullets": 7}
+		c.Inv = map[string]int{"Sniper Rifle": 1, "Heavy Bullets": 7}
 	case "2":
 		c.Level = 1
 		c.maxHp = 130
 		c.Hp = c.maxHp / 2
-		c.inv = map[string]int{"Assault Rifle": 1, "Medium bullets": 44}
+		c.Inv = map[string]int{"Assault Rifle": 1, "Medium bullets": 44}
 	case "3":
 		c.Level = 1
 		c.maxHp = 150
 		c.Hp = c.maxHp / 2
-		c.inv = map[string]int{"Shotgun": 1, "Shotgun shells": 9}
+		c.Inv = map[string]int{"Shotgun": 1, "Shotgun shells": 9}
 	case "???":
 		c.Level = 1
 		c.maxHp = 1
 		c.Hp = 1
-		c.inv = map[string]int{"Atomic": 999}
+		c.Inv = map[string]int{"Atomic": 999}
 	}
 }
