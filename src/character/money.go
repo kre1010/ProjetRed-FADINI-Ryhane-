@@ -33,11 +33,11 @@ func main() {
 	gagnerArgent(&character, 100)
 	afficherArgent(&character)
 	fmt.Println("\n=== Boutique ===")
-	acheterObjet(&character, "Épée en acier", 60)
+	acheterObjet(&character, "canon long", 60)
 	afficherArgent(&character)
-	acheterObjet(&character, "Potion de soin", 30)
+	acheterObjet(&character, "Med kit", 30)
 	afficherArgent(&character)
-	acheterObjet(&character, "Armure légendaire", 200)
+	acheterObjet(&character, "plaque ceramique", 200)
 	afficherArgent(&character)
 
 }
