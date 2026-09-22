@@ -35,7 +35,7 @@ func main() {
 	fmt.Println("\n=== Boutique ===")
 	acheterObjet(&character, "canon long", 60)
 	afficherArgent(&character)
-	acheterObjet(&character, "Med kit", 30)
+	acheterObjet(&character, "Medkit", 30)
 	afficherArgent(&character)
 	acheterObjet(&character, "plaque ceramique", 200)
 	afficherArgent(&character)
