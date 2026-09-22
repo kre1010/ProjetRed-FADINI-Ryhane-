@@ -20,6 +20,3 @@ func buyItem(item string) {
 		fmt.Println(item, "a été ajouté à l'inventaire.")
 	}
 }
-
-
-
