@@ -44,16 +44,16 @@ func MenuJeu(player *character.Character) {
 			// PLUS TARD
 			fmt.Println("Personnage")
 
-        case 3:
+		case 3:
 
-            inventory.AccessInventory()
+			inventory.AccessInventory()
 
 		case 4:
 			// PLUS TARD
 			fmt.Println("Équipement")
 
-        case 0:
-            Menu()
+		case 0:
+			Menu()
 
 		default:
 			fmt.Println("Choix invalide.")

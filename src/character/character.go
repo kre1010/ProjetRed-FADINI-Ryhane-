@@ -5,13 +5,14 @@ import (
 )
 
 type Character struct {
-	Name   string
-	Class  string
-	Level  int
-	maxHp  int
-	Hp     int
-	Inv    map[string]int
-	Argent int
+	Name    string
+	Class   string
+	Level   int
+	maxHp   int
+	Hp      int
+	Inv     map[string]int
+	Argent  int
+	buyItem int
 }
 
 func (c *Character) MenuInitCharacter() {
