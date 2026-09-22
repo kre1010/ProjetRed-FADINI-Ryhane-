@@ -3,6 +3,7 @@ package inventory
 import (
 	"fmt"
 	"red/src/character"
+	// "red/src/menu"
 )
 
 func Marchand(c *character.Character) {
@@ -23,7 +24,7 @@ func Marchand(c *character.Character) {
 
 	switch choix {
 	case 0:
-		fmt.Println()
+		fmt.Println("alo")
 	case 1:
 		c.AcheterObjet("Kevlar", 8)
 	case 2:

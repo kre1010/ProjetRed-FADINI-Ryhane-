@@ -4,13 +4,13 @@ import (
 	"fmt"
 )
 
-func gagnerArgent(j *Character, montant int) {
-	j.Argent += montant
-	fmt.Printf("%s a gagné %d eddie !\n", j.Name, montant)
+func gagnerArgent(c *Character, montant int) {
+	c.Argent += montant
+	fmt.Printf("%s a gagné %d eddie !\n", c.Name, montant)
 }
 
-func afficherArgent(j *Character) {
-	fmt.Printf("eddie actuel : %d eddie\n", j.Argent)
+func afficherArgent(c *Character) {
+	fmt.Printf("eddie actuel : %d eddie\n", c.Argent)
 }
 
 func (c *Character) AcheterObjet(nomObjet string, prix int) {
