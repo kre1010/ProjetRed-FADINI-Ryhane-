@@ -18,13 +18,13 @@ func (c *Character) MenuInitCharacter() {
 	fmt.Println("Début de la création de votre personnage...")
 	fmt.Println("Choisissez votre nom :")
 	var nameInput string
-	fmt.Scanln(&nameInput)
+	fmt.Scan(&nameInput)
 	fmt.Println("Choisissez votre classe :")
 	fmt.Println("\t 1 - Sniper : HP = 50, max HP = 100, Sniper rifle, Heavy Bullet = 7")
 	fmt.Println("\t 2 - Assault : HP = 50, max HP = 100, Assault rifle, Medium bullets = 44")
 	fmt.Println("\t 3 - Sniper : HP = 50, max HP = 100, Shotgun, Shotgun shells = 9")
 	var classInput string
-	fmt.Scanln(&classInput)
+	fmt.Scan(&classInput)
 
 	c.InitCharacter(nameInput, classInput)
 	fmt.Println("fin de la création de votre personnage....")
