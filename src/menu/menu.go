@@ -5,7 +5,7 @@ import (
 	"os/exec"
 )
 
-func nettoyer() {
+func Nettoyer() {
 	cmd := exec.Command("cmd", "/c", "cls")
 	cmd.Stdout = nil
 	cmd.Run()
@@ -34,7 +34,7 @@ func Menu() {
 
 	switch choix {
 	case 0:
-		nettoyer()
+		Nettoyer()
 		fmt.Println("Fermeture de KOTW...")
 		return
 
@@ -42,7 +42,7 @@ func Menu() {
 		NouvellePartie()
 
 	case 2:
-		nettoyer()
+		Nettoyer()
 		fmt.Println("============== OPTIONS ==============")
 		fmt.Println()
 		fmt.Println("1. Son")
@@ -54,7 +54,7 @@ func Menu() {
 		fmt.Scanln()
 
 	case 3:
-		nettoyer()
+		Nettoyer()
 		fmt.Println("=============== CRÉDIT ===============")
 		fmt.Println()
 		fmt.Println("KOTW")

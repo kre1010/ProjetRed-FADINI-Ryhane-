@@ -2,19 +2,6 @@ package character
 
 import "fmt"
 
-type character struct {
-	Name   string
-	Health int
-	Alive  bool
-}
-
-func player() {
-	player := Character{}
-	Damage(&player, 30)
-	Damage(&player, 50)
-	Damage(&player, 25)
-}
-
 func Damage(c *Character, amount int) {
 
 	if c.Hp <= 0 {

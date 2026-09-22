@@ -1,9 +1,10 @@
 package main
 
 import (
-	"red/src/menu"
+	"red/src/character"
+	"red/src/inventory"
 )
 
 func main() {
-	menu.Menu()
+	inventory.Marchand(&character.Character{})
 }
