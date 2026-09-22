@@ -1,9 +1,10 @@
 package menu
 
 import (
-    "fmt"
+	"fmt"
 
-    "red/src/character"
+	"red/src/character"
+	"red/src/inventory"
 )
 
 func NouvellePartie() {
@@ -44,8 +45,9 @@ func MenuJeu(player *character.Character) {
             fmt.Println("Personnage")
 
         case 3:
-            // PLS TARD
-            fmt.Println("Inventaire")
+            
+            inventory.AccessInventory(nil)
+
 
         case 4:
             // PLUS TARD
