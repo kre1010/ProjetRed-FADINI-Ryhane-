@@ -34,7 +34,7 @@ func main() {
         Green + "Préparez-vous à une aventure...\n" + Reset +
         Yellow + Underline + "Que la quête commence !" + Reset
 
-    // On affiche le texte avec effet typeWriter 
+    // On affiche le texte avec effet typeWrite 
     typeWriter(texte, 50*time.Millisecond)
 
     // Ensuite, un message simple sans mise en forme ni couleur
