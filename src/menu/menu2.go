@@ -8,12 +8,12 @@ import (
 )
 
 func NouvellePartie() {
-	var player character.Character
+	var joueur character.Character
 
 	// FCT DE SAMI
 	player.MenuInitCharacter()
 	// LE PERSO VIENT D'ETRE CREE
-	MenuJeu(&player)
+	MenuJeu(&joueur)
 }
 
 func MenuJeu(player *character.Character) {
