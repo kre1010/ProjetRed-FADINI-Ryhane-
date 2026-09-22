@@ -20,9 +20,9 @@ func (c *Character) OpenArmurier() {
 
 	switch choice {
 	case 1:
-		c.buyItem("Bandage", 3)
+		c.AcheterObjet("Bandage", 3)
 	case 2:
-		c.buyItem("redbulle", 6)
+		c.AcheterObjet("redbulle", 6)
 	case 3:
 		if c.Argent < 25 {
 			fmt.Println("\033[31mPas assez d'eddie pour acheter le Cache Flammes\033[0m")
@@ -31,13 +31,13 @@ func (c *Character) OpenArmurier() {
 		c.Argent -= 25
 		c.OpenArmurier()
 	case 4:
-		c.buyItem("viseur holographique", 4)
+		c.AcheterObjet("viseur holographique", 4)
 	case 5:
-		c.buyItem("gachette rapide", 7)
+		c.AcheterObjet("gachette rapide", 7)
 	case 6:
-		c.buyItem("habiliter au tir", 3)
+		c.AcheterObjet("habiliter au tir", 3)
 	case 7:
-		c.buyItem("munitions", 1)
+		c.AcheterObjet("munitions", 1)
 	case 8:
 		if c.Argent < 30 {
 			fmt.Println("\033[31mPas assez d'eddie pour cette amélioration\033[0m")

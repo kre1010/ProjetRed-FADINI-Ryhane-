@@ -1,10 +1,12 @@
 package inventory
 
-import "fmt"
+import (
+	"fmt"
+	"red/src/character"
+)
 
-var inventory map[string]int
-
-func AccessInventory() {
+func AccessInventory(c *character.Character) {
 	fmt.Println("Inventaire :")
-	fmt.Println("-", inventory)
+	fmt.Println("-", c.Inv)
 }
+
