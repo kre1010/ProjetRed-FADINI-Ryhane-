@@ -11,7 +11,7 @@ func NouvellePartie() {
 	var joueur character.Character
 
 	// FCT DE SAMI
-	player.MenuInitCharacter()
+	joueur.MenuInitCharacter()
 	// LE PERSO VIENT D'ETRE CREE
 	MenuJeu(&joueur)
 }
