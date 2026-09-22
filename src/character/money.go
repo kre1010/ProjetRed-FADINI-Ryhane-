@@ -4,25 +4,25 @@ import (
 	"fmt"
 )
 
-func gagnerArgent(j *Character, montant int) {
-	j.Argent += montant
-	fmt.Printf("%s a gagné %d eddie !\n", j.Name, montant)
+func gagnerArgent(c *Character, montant int) {
+	c.Argent += montant
+	fmt.Printf("%s a gagné %d eddie !\n", c.Name, montant)
 }
 
-func afficherArgent(j *Character) {
-	fmt.Printf("eddie actuel : %d eddie\n", j.Argent)
+func afficherArgent(c *Character) {
+	fmt.Printf("eddie actuel : %d eddie\n", c.Argent)
 }
 
-func acheterObjet(j *Character, nomObjet string, prix int) {
-	if j.Argent >= prix {
-		j.Argent -= prix
+func acheterObjet(c *Character, nomObjet string, prix int) {
+	if c.Argent >= prix {
+		c.Argent -= prix
 		fmt.Printf("Vous avez acheté %s pour %d eddie.\n", nomObjet, prix)
 	} else {
 		fmt.Printf("Pas assez d'eddie pour acheter %s.\n", nomObjet)
 	}
 }
 
-func main() {
+func character() {
 	character := Character{
 		Name:   "character",
 		Argent: 100,
@@ -30,7 +30,7 @@ func main() {
 	fmt.Println("=== Début du jeu ===")
 	afficherArgent(&character)
 	fmt.Println("\n=== Combat gagné ===")
-	gagnerArgent(&character, 100)
+	gagnerArgent(&character, 50)
 	afficherArgent(&character)
 	fmt.Println("\n=== Boutique ===")
 	acheterObjet(&character, "canon long", 60)

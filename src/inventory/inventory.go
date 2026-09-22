@@ -8,4 +8,3 @@ func AccessInventory() {
 	fmt.Println("Inventaire :")
 	fmt.Println("-", inventory)
 }
-
