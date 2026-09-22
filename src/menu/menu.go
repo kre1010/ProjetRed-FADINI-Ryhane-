@@ -68,4 +68,3 @@ func Menu() {
 		fmt.Println("Choix invalide.")
 	}
 }
-

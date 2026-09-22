@@ -16,9 +16,9 @@ func NouvellePartie() {
 	MenuJeu(&player)
 }
 
-func MenuJeu(c *character.Character) {
+func MenuJeu(player *character.Character) {
 	for {
-		Nettoyer()
+		nettoyer()
 
 		fmt.Println("========================================")
 		fmt.Println("                 KOTW")
@@ -45,14 +45,15 @@ func MenuJeu(c *character.Character) {
 			fmt.Println("Personnage")
 
 		case 3:
-			inventory.AccessInventory(c.Inv)
+
+			inventory.AccessInventory()
 
 		case 4:
 			// PLUS TARD
 			fmt.Println("Équipement")
 
 		case 0:
-			return
+			Menu()
 
 		default:
 			fmt.Println("Choix invalide.")

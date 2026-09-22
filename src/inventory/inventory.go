@@ -2,10 +2,10 @@ package inventory
 
 import "fmt"
 
-func AccessInventory(inventory []string) {
-	fmt.Println("Inventaire :")
+var inventory map[string]int
 
-	for _, item := range inventory {
-		fmt.Println(item)
-	}
+func AccessInventory() {
+	fmt.Println("Inventaire :")
+	fmt.Println("-", inventory)
 }
+
