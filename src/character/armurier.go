@@ -21,7 +21,7 @@ func (c *Character) OpenArmurier() {
 	case 1:
 		c.AcheterObjet("Bandage", 3)
 	case 2:
-		c.AcheterObjet("redbulle", 6)
+		c.AcheterObjet("redbull", 6)
 	case 3:
 		if c.Argent < 10 {
 			fmt.Println("\033[31mPas assez d'eddie pour acheter pantalon renforcé crye precision g4\033[0m")

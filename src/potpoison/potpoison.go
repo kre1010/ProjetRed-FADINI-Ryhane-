@@ -16,3 +16,4 @@ func CocktailMolotov(c *character.Character) {
 	fmt.Println("Total : -30 Hp")
 }
 
+
