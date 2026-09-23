@@ -1,9 +1,10 @@
 package main
 
 import (
-	"red/src/menu"
+	"red/src/character"
+	"red/src/potpoison"
 )
 
 func main() {
-	menu.Menu()
+	potpoison.CocktailMolotov(&character.Character{})
 }
