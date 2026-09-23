@@ -12,6 +12,7 @@ type Character struct {
 	MaxHp int
 	Inv    map[string]int
 	Argent int
+	skill []string
 }
 
 func (c *Character) MenuInitCharacter() {
