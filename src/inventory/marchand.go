@@ -23,10 +23,6 @@ func Marchand(c *character.Character) {
     fmt.Println("9. Céramic : 10 Eddies")
     fmt.Println("10. Grenade : 25 Eddies")
 
-	var choix int
-	fmt.Print("\nChoix : ")
-	fmt.Scan(&choix)
-
     var choix int
     fmt.Print("\nChoix : ")
     fmt.Scan(&choix)

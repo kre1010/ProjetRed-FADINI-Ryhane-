@@ -15,9 +15,12 @@ var operateur = map [string]Operateur {
 	"Jaegerkorpset" : {Nom: "Jaegerkorpset",Hpmax: 110, Hpactuel: 110, Attaque: 30},
 }
 
+func initOperateur() {
+var mannequin = map [string]Operateur {
 
+  "Agent d'entrainement":  {Nom: "Agent d'entrainement",Hpmax: 40, Hpactuel: 40, Attaque: 5},
 
-    
+}    
 
 
 
