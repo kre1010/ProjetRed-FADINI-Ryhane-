@@ -23,19 +23,19 @@ func Armurier(c *Character) {
 
 	switch choix {
 	case 1:
-		CraftObjet(c, "Gilet Militech", 5, 3, "Torse")
+		CreeObjet(c, "Gilet Militech", 5, 3, "Torse")
 
 	case 2:
-		CraftObjet(c, "Casque Ops-Core", 3, 2, "Tête")
+		CreeObjet(c, "Casque Ops-Core", 3, 2, "Tête")
 
 	case 3:
-		CraftObjet(c, "Pantalon Crye Precision G4", 4, 3, "Jambe")
+		CreeObjet(c, "Pantalon Crye Precision G4", 4, 3, "Jambe")
 
 	case 4:
-		CraftObjet(c, "Gants Oakley SI", 1, 1, "Main")
+		CreeObjet(c, "Gants Oakley SI", 1, 1, "Main")
 
 	case 5:
-		CraftObjet(c, "Bottes Salomon Forces", 2, 2, "Pieds")
+		CreeObjet(c, "Bottes Salomon Forces", 2, 2, "Pieds")
 
 	case 0:
 		fmt.Println("Tu quittes l'armurier.")
@@ -46,7 +46,7 @@ func Armurier(c *Character) {
 }
 
 
-func CraftObjet(c *Character, nomObjet string, kevlar int, ceramic int, emplacement string) {
+func CreeObjet(c *Character, nomObjet string, kevlar int, ceramic int, emplacement string) {
 	if c.Inv["Kevlar"] < kevlar {
 		fmt.Println("Pas assez de Kevlar.")
 		return
