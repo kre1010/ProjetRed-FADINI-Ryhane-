@@ -20,9 +20,9 @@ func (c *Character) MenuInitCharacter() {
 	var nameInput string
 	fmt.Scan(&nameInput)
 	fmt.Println("Choisissez votre classe :")
-	fmt.Println("\t 1 - Sniper : HP = 50, max HP = 100, Sniper rifle, Heavy Bullet = 7")
-	fmt.Println("\t 2 - Assault : HP = 50, max HP = 100, Assault rifle, Medium bullets = 44")
-	fmt.Println("\t 3 - Shotgunner : HP = 50, max HP = 100, Shotgun, Shotgun shells = 9")
+	fmt.Println("\t 1 - Sniper : HP = 75, max HP = 150, Sniper rifle, Heavy Bullet = 7")
+	fmt.Println("\t 2 - Assault : HP = 65, max HP = 130, Assault rifle, Medium bullets = 44")
+	fmt.Println("\t 3 - Shotgunner : HP = 75, max HP = 150, Shotgun, Shotgun shells = 9")
 	var classInput string
 	fmt.Scan(&classInput)
 
@@ -31,27 +31,28 @@ func (c *Character) MenuInitCharacter() {
 }
 
 func (c *Character) InitCharacter(name string, class string) {
-
 	c.Name = name
 	c.Class = class
 
 	switch c.Class {
 	case "1":
 		c.Level = 1
-		c.MaxHp = 100
-		c.Hp = c.MaxHp / 2
 		c.MaxHp = 150
+		c.Hp = c.MaxHp / 2
 		c.Inv = map[string]int{"Sniper Rifle": 1, "Heavy Bullets": 7}
+		c.Argent = 100
 	case "2":
 		c.Level = 1
 		c.MaxHp = 130
 		c.Hp = c.MaxHp / 2
 		c.Inv = map[string]int{"Assault Rifle": 1, "Medium bullets": 44}
+		c.Argent = 100
 	case "3":
 		c.Level = 1
 		c.MaxHp = 150
 		c.Hp = c.MaxHp / 2
 		c.Inv = map[string]int{"Shotgun": 1, "Shotgun shells": 9}
+		c.Argent = 100
 	case "???":
 		c.Level = 1
 		c.MaxHp = 1
@@ -59,4 +60,5 @@ func (c *Character) InitCharacter(name string, class string) {
 		c.Inv = map[string]int{"Atomic": 999}
 	}
 }
+
 

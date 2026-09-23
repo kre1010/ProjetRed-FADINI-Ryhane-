@@ -22,13 +22,15 @@ func MenuJeu(player *character.Character) {
 		Nettoyer()
 
 		fmt.Println("========================================")
-		fmt.Println("                 KOTW")
+		fmt.Println("                  KOTW")
 		fmt.Println("========================================")
 		fmt.Println()
 		fmt.Println("1. Jouer")
 		fmt.Println("2. Personnage")
 		fmt.Println("3. Inventaire")
 		fmt.Println("4. Équipement")
+		fmt.Println("5. Marchand")
+		fmt.Println("6. Armurier")
 		fmt.Println("0. Retour")
 		fmt.Println()
 
@@ -38,31 +40,45 @@ func MenuJeu(player *character.Character) {
 
 		switch choix {
 		case 1:
-			// PLUS TARD
 			fmt.Println("Jouer")
 
 		case 2:
-			// PLUS TARD
-			fmt.Println("Personnage")
+			Nettoyer()
+			character.ShowCharacterInfo(player)
+			fmt.Scanln()
+			fmt.Scanln()
 
 		case 3:
-
+			Nettoyer()
 			inventory.AccessInventory(player)
-
+			fmt.Scanln()
+			fmt.Scanln()
 		case 4:
-			
+			Nettoyer()
 			equipement.AfficherEquipement()
+			fmt.Scanln()
+			fmt.Scanln()
+
+		case 5:
+			Nettoyer()
+			inventory.AfficherMarchand(player)
+			inventory.Marchand(player)
+			fmt.Scanln()
+			fmt.Scanln()
+
+		case 6:
+			Nettoyer()
+			character.Armurier(player)
+			fmt.Scanln()
+			fmt.Scanln()
 
 		case 0:
+			Nettoyer()
 			Menu()
+			return
 
 		default:
 			fmt.Println("Choix invalide.")
 		}
-
-		fmt.Println()
-		fmt.Println("Appuie sur Entrée pour continuer...")
-		fmt.Scanln()
-		fmt.Scanln()
 	}
 }
