@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"red/src/character"
+	"red/src/equipement"
 	"red/src/inventory"
 )
 
@@ -49,8 +50,8 @@ func MenuJeu(player *character.Character) {
 			inventory.AccessInventory(player)
 
 		case 4:
-			// PLUS TARD
-			fmt.Println("Équipement")
+			
+			equipement.AfficherEquipement()
 
 		case 0:
 			Menu()
