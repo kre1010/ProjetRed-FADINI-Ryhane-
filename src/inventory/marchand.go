@@ -19,6 +19,7 @@ func Marchand(c *character.Character) {
     fmt.Println("7. Potion de soin : GRATUIT !")
     fmt.Println("8. Sac : 5 Eddies")
     fmt.Println("9. Céramic : 10 Eddies")
+    fmt.Println("10. Grenade : 25 Eddies")
 
 
     var choix int
@@ -56,6 +57,9 @@ func Marchand(c *character.Character) {
     case 9:
         c.AcheterObjet("Céramic", 10)
 		c.Inv = map[string]int{"Céramic" : 1}
+    case 10:
+        c.AcheterObjet("Grenade", 25)
+		c.Inv = map[string]int{"Grenade" : 1}
     default:
         fmt.Println("Choix invalide.")
     }
