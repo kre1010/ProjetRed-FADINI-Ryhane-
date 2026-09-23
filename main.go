@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	inventory.Marchand(&character.Character{})
+	(func(c *Character) OpenArmurier)()
 }
