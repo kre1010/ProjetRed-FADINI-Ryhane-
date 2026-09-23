@@ -1,12 +1,10 @@
 package inventory
 
-
 import (
-    "fmt"
-    "red/src/character"
-    // "red/src/menu"
+	"fmt"
+	"red/src/character"
+	// "red/src/menu"
 )
-
 
 func Marchand(c *character.Character) {
     if len(c.Inv) == 12 {
@@ -27,12 +25,10 @@ func Marchand(c *character.Character) {
     fmt.Println("11. MedKit : 15 Eddies")
     fmt.Println("12. Cocktail Molotov : 20 Eddies")
 
-
-    var choix int
-    fmt.Print("\nChoix : ")
-    fmt.Scan(&choix)
-
-
+	var choix int
+	fmt.Print("\nChoix : ")
+	fmt.Scan(&choix)
+    
     switch choix {
     case 0:
         fmt.Println("alo")
