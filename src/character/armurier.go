@@ -19,9 +19,9 @@ func (c *Character) OpenArmurier() {
 
 	switch choice {
 	case 1:
-		c.AcheterObjet("gilet pare-balles militech", 30)
+		c.AcheterObjet("Bandage", 3)
 	case 2:
-		c.AcheterObjet("casque pare balles ops-core", 10)
+		c.AcheterObjet("redbulle", 6)
 	case 3:
 		if c.Argent < 10 {
 			fmt.Println("\033[31mPas assez d'eddie pour acheter pantalon renforcé crye precision g4\033[0m")
@@ -30,13 +30,13 @@ func (c *Character) OpenArmurier() {
 		c.Argent -= 10
 		c.OpenArmurier()
 	case 4:
-		c.AcheterObjet("pantalon renforcé crye precision g4", 10)
+		c.AcheterObjet("viseur holographique", 4)
 	case 5:
-		c.AcheterObjet("gants Oakley SI", 5)
+		c.AcheterObjet("gachette rapide", 7)
 	case 6:
-		c.AcheterObjet("bottes Salomon Forces", 5)
+		c.AcheterObjet("habiliter au tir", 3)
 	case 7:
-		c.AcheterObjet("plaque en kevlar", 2)
+		c.AcheterObjet("munitions", 1)
 	case 8:
 		if c.Argent < 30 {
 			fmt.Println("\033[31mPas assez d'eddie pour cette amélioration\033[0m")

@@ -2,6 +2,7 @@ package menu
 
 import (
 	"fmt"
+	"os"
 	"os/exec"
 )
 
@@ -36,7 +37,7 @@ func Menu() {
 	case 0:
 		Nettoyer()
 		fmt.Println("Fermeture de KOTW...")
-		return
+		os.Exit(0)
 
 	case 1:
 		NouvellePartie()
@@ -68,3 +69,4 @@ func Menu() {
 		fmt.Println("Choix invalide.")
 	}
 }
+

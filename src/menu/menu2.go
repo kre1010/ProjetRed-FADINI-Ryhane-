@@ -46,7 +46,7 @@ func MenuJeu(player *character.Character) {
 
 		case 3:
 
-			inventory.AccessInventory()
+			inventory.AccessInventory(player)
 
 		case 4:
 			// PLUS TARD
