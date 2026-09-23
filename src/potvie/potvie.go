@@ -1,11 +1,13 @@
 package potvie
 
-import c "red/src/character"
+import "red/src/character"
 
-func Medkit(c c.Character) {
+func Medkit(c *character.Character) {
 	c.Hp += 20
-
-	if c.Hp > c.maxHp {
-		c.Hp = c.maxHp
+	
+	if c.Hp > c.MaxHp {
+		c.Hp = c.MaxHp
 	}
 }
+
+

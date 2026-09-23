@@ -9,5 +9,5 @@ func (c *Character) ShowCharacterInfo() {
 	fmt.Printf("\t nom : %s\n", c.Name)
 	fmt.Printf("\t class : %s\n", c.Class)
 	fmt.Printf("\t level : %d\n", c.Level)
-	fmt.Printf("\t HP : %d/%d\n", c.Hp, c.maxHp)
+	fmt.Printf("\t HP : %d/%d\n", c.Hp, c.MaxHp)
 }

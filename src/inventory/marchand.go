@@ -9,6 +9,10 @@ import (
 
 
 func Marchand(c *character.Character) {
+    if len(c.Inv) == 10 {
+		fmt.Println("L'inventaire est plein")
+        return
+	}
     fmt.Println("0. Quitter")
     fmt.Println("1. Kevlar : 8 Eddies")
     fmt.Println("2. Canon Long : 20 Eddies")
