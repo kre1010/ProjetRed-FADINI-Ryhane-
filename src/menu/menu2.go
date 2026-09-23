@@ -38,42 +38,37 @@ func MenuJeu(player *character.Character) {
 		fmt.Print("Choix : ")
 		fmt.Scan(&choix)
 
+	Nettoyer()	
 		switch choix {
 		case 1:
 			fmt.Println("Jouer")
 
 		case 2:
-			Nettoyer()
 			character.ShowCharacterInfo(player)
 			fmt.Scanln()
 			fmt.Scanln()
 
 		case 3:
-			Nettoyer()
 			inventory.AccessInventory(player)
 			fmt.Scanln()
 			fmt.Scanln()
 		case 4:
-			Nettoyer()
 			equipement.AfficherEquipement()
 			fmt.Scanln()
 			fmt.Scanln()
 
 		case 5:
-			Nettoyer()
 			inventory.AfficherMarchand(player)
 			inventory.Marchand(player)
 			fmt.Scanln()
 			fmt.Scanln()
 
 		case 6:
-			Nettoyer()
 			character.Armurier(player)
 			fmt.Scanln()
 			fmt.Scanln()
 
 		case 0:
-			Nettoyer()
 			Menu()
 			return
 
