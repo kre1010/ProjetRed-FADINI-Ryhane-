@@ -1,15 +1,13 @@
 package inventory
 
-
 import (
-    "fmt"
-    "red/src/character"
-    // "red/src/menu"
+	"fmt"
+	"red/src/character"
+	// "red/src/menu"
 )
 
-
 func Marchand(c *character.Character) {
-    if len(c.Inv) == 10 {
+    if len(c.Inv) == 12 {
 		fmt.Println("L'inventaire est plein")
         return
 	}
@@ -24,13 +22,21 @@ func Marchand(c *character.Character) {
     fmt.Println("8. Sac : 5 Eddies")
     fmt.Println("9. Céramic : 10 Eddies")
     fmt.Println("10. Grenade : 25 Eddies")
+    fmt.Println("11. MedKit : 15 Eddies")
+    fmt.Println("12. Cocktail Molotov : 20 Eddies")
 
-
+<<<<<<< HEAD
     var choix int
     fmt.Print("\nChoix : ")
     fmt.Scan(&choix)
 
 
+=======
+	var choix int
+	fmt.Print("\nChoix : ")
+	fmt.Scan(&choix)
+    
+>>>>>>> 1de84e578b3b4358259a109d34737abfe9f5f583
     switch choix {
     case 0:
         fmt.Println("alo")
@@ -64,7 +70,15 @@ func Marchand(c *character.Character) {
     case 10:
         c.AcheterObjet("Grenade", 25)
 		c.Inv = map[string]int{"Grenade" : 1}
+    case 11:
+        c.AcheterObjet("MedKit", 15)
+        c.Inv = map[string]int{"MedKit" : 1}
+    case 12:
+        c.AcheterObjet("Cocktail Molotov", 20)
+        c.Inv = map[string]int{"Cocktail Molotov" : 1}
     default:
         fmt.Println("Choix invalide.")
     }
 }
+
+
