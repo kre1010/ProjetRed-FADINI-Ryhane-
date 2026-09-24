@@ -46,7 +46,9 @@ func MenuJeu(player *character.Character) {
 	utils.Nettoyer()	
 		switch choix {
 		case 1:
-			jouer.Intro()
+			sounds.StopMenu()
+			sounds.PlayCombat()
+			jouer.Intro(player)
 			fmt.Scanln()
 			fmt.Scanln()
 
@@ -75,7 +77,7 @@ func MenuJeu(player *character.Character) {
 			fmt.Scanln()
 
 		case 0:
-			sounds.StopFlash()
+			sounds.StopMenu()
 			Menu()
 			return
 

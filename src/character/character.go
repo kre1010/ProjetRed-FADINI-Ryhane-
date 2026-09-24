@@ -28,7 +28,7 @@ func (c *Character) MenuInitCharacter() {
 
 	for {
 		fmt.Println("Choisissez votre classe :")
-		fmt.Println("\t1 - Sniper : HP = 75, max HP = 150, Sniper rifle, Heavy Bullet = 7")
+		fmt.Println("\t1 - Sniper : HP = 50, max HP = 100, Sniper rifle, Heavy Bullet = 7")
 		fmt.Println("\t2 - Assault : HP = 65, max HP = 130, Assault rifle, Medium bullets = 44")
 		fmt.Println("\t3 - Shotgunner : HP = 75, max HP = 150, Shotgun, Shotgun shells = 9")
 

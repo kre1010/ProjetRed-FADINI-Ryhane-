@@ -43,38 +43,29 @@ func Armurier(c *Character) {
 }
 
 func CreeObjet(c *Character, nomObjet string, kevlar int, ceramic int, emplacement string) {
+
 	if equipement.Equip.Tête[nomObjet] == 1 {
 		fmt.Println("Vous possédez déjà l'équipement")
-		c.Hp += 20
-		c.MaxHp += 20
 		return
 	}
 
 	if equipement.Equip.Torse[nomObjet] == 1 {
 		fmt.Println("Vous possédez déjà l'équipement")
-		c.Hp += 25
-		c.MaxHp += 25
 		return
 	}
 
 	if equipement.Equip.Jambe[nomObjet] == 1 {
 		fmt.Println("Vous possédez déjà l'équipement")
-		c.Hp += 15
-		c.MaxHp += 15
 		return
 	}
 
 	if equipement.Equip.Mains[nomObjet] == 1 {
 		fmt.Println("Vous possédez déjà l'équipement")
-		c.Hp += 5
-		c.MaxHp += 5
 		return
 	}
 
 	if equipement.Equip.Pieds[nomObjet] == 1 {
 		fmt.Println("Vous possédez déjà l'équipement")
-		c.Hp += 10
-		c.MaxHp += 10
 		return
 	}
 
@@ -92,21 +83,33 @@ func CreeObjet(c *Character, nomObjet string, kevlar int, ceramic int, emplaceme
 	c.Inv["Céramic"] -= ceramic
 
 	switch emplacement {
+
 	case "Tête":
 		equipement.Equip.Tête[nomObjet]++
+		c.Hp += 15
+		c.MaxHp += 15
 
 	case "Torse":
 		equipement.Equip.Torse[nomObjet]++
+		c.Hp += 25
+		c.MaxHp += 25
 
 	case "Jambe":
 		equipement.Equip.Jambe[nomObjet]++
+		c.Hp += 15
+		c.MaxHp += 15
 
 	case "Main":
 		equipement.Equip.Mains[nomObjet]++
+		c.Hp += 5
+		c.MaxHp += 5
 
 	case "Pieds":
 		equipement.Equip.Pieds[nomObjet]++
+		c.Hp += 10
+		c.MaxHp += 10
 	}
 
 	fmt.Println("Vous avez fabriqué", nomObjet)
+	fmt.Println("HP :", c.Hp, "/", c.MaxHp)
 }

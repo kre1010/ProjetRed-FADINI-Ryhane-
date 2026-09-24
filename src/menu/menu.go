@@ -40,7 +40,7 @@ func Menu() {
 ` + "\033[0m")
 
 
-	sounds.PlayFlash()
+	sounds.PlayMenu()
 	fmt.Println("\033[33m")
 	fmt.Println("0. Quitter")
 	fmt.Println("1. Nouvelle Partie")
@@ -53,7 +53,7 @@ func Menu() {
 
 	switch choix {
 	case 0:
-		sounds.StopFlash()
+		sounds.StopMenu()
 		utils.Nettoyer()
 		fmt.Println("Fermeture de KOTW...")
 		os.Exit(0)
