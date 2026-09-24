@@ -7,9 +7,9 @@ import (
 )
 
 func Nettoyer() {
-	cmd := exec.Command("cmd", "/c", "cls")
-	cmd.Stdout = nil
-	cmd.Run()
+    cmd := exec.Command("cmd", "/c", "cls")
+    cmd.Stdout = os.Stdout
+    cmd.Run()
 }
 
 func Menu() {
@@ -40,6 +40,7 @@ func Menu() {
 		os.Exit(0)
 
 	case 1:
+		Nettoyer()
 		NouvellePartie()
 
 	case 2:
@@ -69,3 +70,5 @@ func Menu() {
 		fmt.Println("Choix invalide.")
 	}
 }
+
+

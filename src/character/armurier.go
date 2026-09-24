@@ -6,16 +6,14 @@ import (
 )
 
 func Armurier(c *Character) {
-	fmt.Println("\033[1;33m=== ARMURIER ===\033[0m")
-	fmt.Println("\033[36m1.\033[0m gilet pare-balles militech - 30 eddie")
-	fmt.Println("\033[36m2.\033[0m casque pare balles ops-core - 10 eddie")
-	fmt.Println("\033[36m3.\033[0m pantalon renforcé crye precision g4 - 10 eddie")
-	fmt.Println("\033[36m4.\033[0m gants Oakley SI - 5 eddie")
-	fmt.Println("\033[36m5.\033[0m bottes Salomon Forces - 5 eddie")
-	fmt.Println("\033[36m6.\033[0m plaque en kevlar - 2 eddie")
-	fmt.Println("\033[36m8.\033[0m Augmentation d'inventaire - 30 eddie")
-	fmt.Println("\033[36m0.\033[0m Quitter l'armurier")
-	fmt.Print("Ton choix : ")
+	fmt.Println("========== ARMURIER ==========")
+	fmt.Println("1. gilet pare-balles militech - 5 Kevlar, 3 céramic")
+	fmt.Println("2. casque pare balles ops-core - 3 Kevlar, 2 céramic")
+	fmt.Println("3. pantalon renforcé crye precision g4 - 4 Kevlar, 3 céramic ")
+	fmt.Println("4. gants Oakley SI - 1 Kevlar, 1 céramic")
+	fmt.Println("5. 0m bottes Salomon Forces - 2 Kevlar, 2 céramic")
+	fmt.Println("6. Augmentation d'inventaire - 50 eddie")
+	fmt.Println("0. Quitter l'armurier")
 
 	var choix int
 	fmt.Print("Ton choix : ")
@@ -36,9 +34,12 @@ func Armurier(c *Character) {
 
 	case 5:
 		CreeObjet(c, "Bottes Salomon Forces", 2, 2, "Pieds")
+	
+	case 6:
+		c.AcheterObjet("Augmentation d'inventaire", 50)
 
 	case 0:
-		fmt.Println("Tu quittes l'armurier.")
+		fmt.Println("Tu quittes l'armurerie.")
 
 	default:
 		fmt.Println("Choix invalide.")
@@ -46,6 +47,31 @@ func Armurier(c *Character) {
 }
 
 func CreeObjet(c *Character, nomObjet string, kevlar int, ceramic int, emplacement string) {
+	if equipement.Equip.Tête[nomObjet] == 1 {
+		fmt.Println("Vous possédez déjà l'équipement")
+		return
+	}
+
+	if equipement.Equip.Torse[nomObjet] == 1 {
+		fmt.Println("Vous possédez déjà l'équipement")
+		return
+	}
+
+	if equipement.Equip.Jambe[nomObjet] == 1 {
+		fmt.Println("Vous possédez déjà l'équipement")
+		return
+	}
+
+	if equipement.Equip.Mains[nomObjet] == 1 {
+		fmt.Println("Vous possédez déjà l'équipement")
+		return
+	}
+
+	if equipement.Equip.Pieds[nomObjet] == 1 {
+		fmt.Println("Vous possédez déjà l'équipement")
+		return
+	}
+
 	if c.Inv["Kevlar"] < kevlar {
 		fmt.Println("Pas assez de Kevlar.")
 		return

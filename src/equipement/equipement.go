@@ -20,29 +20,19 @@ var Equip = Equipement{
 
 func AfficherEquipement() {
 	fmt.Println("========== ÉQUIPEMENT ==========")
-
 	fmt.Println("Tête :")
-	for nom, quantite := range Equip.Tête {
-		fmt.Println("-", nom, "x", quantite)
-	}
-
+	fmt.Println(Equip.Tête)
 	fmt.Println("Torse :")
-	for nom, quantite := range Equip.Torse {
-		fmt.Println("-", nom, "x", quantite)
-	}
-
+	fmt.Println(Equip.Torse)
 	fmt.Println("Jambe :")
-	for nom, quantite := range Equip.Jambe {
-		fmt.Println("-", nom, "x", quantite)
-	}
-
+	fmt.Println(Equip.Jambe)
 	fmt.Println("Mains :")
-	for nom, quantite := range Equip.Mains {
-		fmt.Println("-", nom, "x", quantite)
-	}
-
+	fmt.Println(Equip.Mains)
 	fmt.Println("Pieds :")
-	for nom, quantite := range Equip.Pieds {
-		fmt.Println("-", nom, "x", quantite)
-	}
+	fmt.Println(Equip.Pieds)
+	fmt.Println("=================================")
+	fmt.Println()
+	fmt.Println("Appuyer sur entrée pour revenir...")
 }
+
+
