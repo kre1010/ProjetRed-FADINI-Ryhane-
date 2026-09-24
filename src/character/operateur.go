@@ -16,11 +16,8 @@ var operateur = map [string]Operateur {
 }
 
 func initOperateur() {
-var mannequin = map [string]Operateur {
+	//var mannequin = map [string]Operateur {
 
-  "Agent d'entrainement":  {Nom: "Agent d'entrainement",Hpmax: 40, Hpactuel: 40, Attaque: 5},
-
-}    
-
-
-
+    //	"Agent d'entrainement":  {Nom: "Agent d'entrainement",Hpmax: 40, Hpactuel: 40, Attaque: 5},
+	//}
+}

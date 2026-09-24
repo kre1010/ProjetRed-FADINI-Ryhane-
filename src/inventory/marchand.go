@@ -2,83 +2,108 @@ package inventory
 
 import (
 	"fmt"
+
 	"red/src/character"
-	// "red/src/menu"
 )
 
 func Marchand(c *character.Character) {
-    if len(c.Inv) == 12 {
-		fmt.Println("L'inventaire est plein")
-        return
+
+	AfficherMarchand(c)
+
+	for {
+		var choix int
+
+		fmt.Print("Choix : ")
+		fmt.Scan(&choix)
+
+		switch choix {
+
+		case 0:
+			fmt.Println("Vous quittez le marchand.")
+			return
+
+		case 1:
+			if c.AcheterObjet("Kevlar", 8) {
+				c.Inv["Kevlar"]++
+			}
+
+		case 2:
+			if c.AcheterObjet("Canon Long", 20) {
+				c.Inv["Canon Long"]++
+			}
+
+		case 3:
+			if c.AcheterObjet("Bandage", 10) {
+				c.Inv["Bandage"]++
+			}
+
+		case 4:
+			if c.AcheterObjet("Heavy Bullets", 15) {
+				c.Inv["Heavy Bullets"]++
+			}
+
+		case 5:
+			if c.AcheterObjet("Medium Bullets", 15) {
+				c.Inv["Medium Bullets"]++
+			}
+
+		case 6:
+			if c.AcheterObjet("Shotgun Shells", 15) {
+				c.Inv["Shotgun Shells"]++
+			}
+
+		case 7:
+			if c.Inv["Potion de Soin"] > 0 {
+				fmt.Println("Vous avez déjà récupéré la Potion de Soin gratuite.")
+			} else {
+				c.Inv["Potion de Soin"]++
+				fmt.Println("Vous recevez une Potion de Soin gratuitement !")
+			}
+		case 8:
+			if c.AcheterObjet("Céramic", 10) {
+				c.Inv["Céramic"]++
+			}
+
+		case 9:
+			if c.AcheterObjet("Grenade", 25) {
+				c.Inv["Grenade"]++
+			}
+
+		case 10:
+			if c.AcheterObjet("MedKit", 15) {
+				c.Inv["MedKit"]++
+			}
+
+		case 11:
+			if c.AcheterObjet("Cocktail Molotov", 20) {
+				c.Inv["Cocktail Molotov"]++
+			}
+
+		default:
+			fmt.Println("Choix invalide.")
+		}
+		fmt.Printf("Eddies restants : %d\n\n", c.Argent)
 	}
-    fmt.Println("0. Quitter")
-    fmt.Println("1. Kevlar : 8 Eddies")
-    fmt.Println("2. Canon Long : 20 Eddies")
-    fmt.Println("3. Bandage : 10 Eddies")
-    fmt.Println("4. Heavy Bullets : 15 Eddies")
-    fmt.Println("5. Medium Bullets : 15 Eddies")
-    fmt.Println("6. Shotgun shells : 15 Eddies")
-    fmt.Println("7. Potion de soin : GRATUIT !")
-    fmt.Println("8. Sac : 5 Eddies")
-    fmt.Println("9. Céramic : 10 Eddies")
-    fmt.Println("10. Grenade : 25 Eddies")
-    fmt.Println("11. MedKit : 15 Eddies")
-    fmt.Println("12. Cocktail Molotov : 20 Eddies")
-
-<<<<<<< HEAD
-    var choix int
-    fmt.Print("\nChoix : ")
-    fmt.Scan(&choix)
-
-
-=======
-	var choix int
-	fmt.Print("\nChoix : ")
-	fmt.Scan(&choix)
-    
->>>>>>> 1de84e578b3b4358259a109d34737abfe9f5f583
-    switch choix {
-    case 0:
-        fmt.Println("alo")
-    case 1:
-        c.AcheterObjet("Kevlar", 8)
-		c.Inv = map[string]int{"Kevlar" : 1}
-    case 2:
-        c.AcheterObjet("Canon Long", 20)
-		c.Inv = map[string]int{"Canon Long" : 1}
-    case 3:
-        c.AcheterObjet("Bandage", 10)
-		c.Inv = map[string]int{"Bandage" : 5}
-    case 4:
-        c.AcheterObjet("Heavy Bullets", 15)
-		c.Inv = map[string]int{"Heavy Bullets" : 3}
-    case 5:
-        c.AcheterObjet("Medium Bullets", 15)
-		c.Inv = map[string]int{"Medium Bullets" : 15}
-    case 6:
-        c.AcheterObjet("Shotgun Shells", 15)
-		c.Inv = map[string]int{"Shotgun Shells" : 7}
-    case 7:
-        c.AcheterObjet("Potion de Soin", 0)
-		c.Inv = map[string]int{"Potion de Soin" : 1}
-    case 8:
-        c.AcheterObjet("Sac", 5)
-		c.Inv = map[string]int{"Sac" : 1}
-    case 9:
-        c.AcheterObjet("Céramic", 10)
-		c.Inv = map[string]int{"Céramic" : 1}
-    case 10:
-        c.AcheterObjet("Grenade", 25)
-		c.Inv = map[string]int{"Grenade" : 1}
-    case 11:
-        c.AcheterObjet("MedKit", 15)
-        c.Inv = map[string]int{"MedKit" : 1}
-    case 12:
-        c.AcheterObjet("Cocktail Molotov", 20)
-        c.Inv = map[string]int{"Cocktail Molotov" : 1}
-    default:
-        fmt.Println("Choix invalide.")
-    }
 }
+
+func AfficherMarchand(c *character.Character) {
+	fmt.Println("========== MARCHAND ==========")
+	fmt.Println("------------------------------")
+	fmt.Println("0. Quitter")
+	fmt.Println("1. Kevlar : 8 Eddies")
+	fmt.Println("2. Canon Long : 20 Eddies")
+	fmt.Println("3. Bandage : 10 Eddies")
+	fmt.Println("4. Heavy Bullets : 15 Eddies")
+	fmt.Println("5. Medium Bullets : 15 Eddies")
+	fmt.Println("6. Shotgun Shells : 15 Eddies")
+	fmt.Println("7. Potion de soin : GRATUIT !")
+	fmt.Println("8. Sac : 5 Eddies")
+	fmt.Println("9. Céramic : 10 Eddies")
+	fmt.Println("10. Grenade : 25 Eddies")
+	fmt.Println("11. MedKit : 15 Eddies")
+	fmt.Println("12. Cocktail Molotov : 20 Eddies")
+	fmt.Println("==============================")
+}
+
 
 
