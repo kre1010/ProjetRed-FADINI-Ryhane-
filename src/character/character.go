@@ -11,6 +11,7 @@ type Character struct {
 	Hp     int
 	MaxHp  int
 	Inv    map[string]int
+	MaxInv int
 	Argent int
 }
 
@@ -46,6 +47,7 @@ func (c *Character) InitCharacter(name string, class int) {
 
 	c.Name = name
 	c.Class = class
+	c.MaxInv = 10
 
 	switch c.Class {
 
@@ -80,3 +82,4 @@ func (c *Character) InitCharacter(name string, class int) {
 		c.Argent = 100
 	}
 }
+

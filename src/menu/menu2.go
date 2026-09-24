@@ -58,7 +58,6 @@ func MenuJeu(player *character.Character) {
 			fmt.Scanln()
 
 		case 5:
-			inventory.AfficherMarchand(player)
 			inventory.Marchand(player)
 			fmt.Scanln()
 			fmt.Scanln()
