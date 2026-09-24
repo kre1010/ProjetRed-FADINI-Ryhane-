@@ -6,7 +6,7 @@ type Equipement struct {
 	Tête  map[string]int
 	Torse map[string]int
 	Jambe map[string]int
-	Mains  map[string]int
+	Mains map[string]int
 	Pieds map[string]int
 }
 
@@ -14,7 +14,7 @@ var Equip = Equipement{
 	Tête:  make(map[string]int),
 	Torse: make(map[string]int),
 	Jambe: make(map[string]int),
-	Mains:  make(map[string]int),
+	Mains: make(map[string]int),
 	Pieds: make(map[string]int),
 }
 
@@ -46,4 +46,3 @@ func AfficherEquipement() {
 		fmt.Println("-", nom, "x", quantite)
 	}
 }
-

@@ -5,13 +5,14 @@ import (
 )
 
 type Character struct {
-	Name  string
-	Class string
-	Level int
-	Hp    int
-	MaxHp int
-	Inv    map[string]int
-	Argent int
+	Name    string
+	Class   string
+	Level   int
+	Hp      int
+	MaxHp   int
+	Inv     map[string]int
+	Argent  int
+	Attaque int
 }
 
 func (c *Character) MenuInitCharacter() {
@@ -40,23 +41,25 @@ func (c *Character) InitCharacter(name string, class string) {
 		c.Level = 1
 		c.MaxHp = 100
 		c.Hp = c.MaxHp / 2
-		c.MaxHp = 150
+		c.Attaque = 50
 		c.Inv = map[string]int{"Sniper Rifle": 1, "Heavy Bullets": 7}
 	case "2":
 		c.Level = 1
 		c.MaxHp = 130
 		c.Hp = c.MaxHp / 2
+		c.Attaque = 30
 		c.Inv = map[string]int{"Assault Rifle": 1, "Medium bullets": 44}
 	case "3":
 		c.Level = 1
 		c.MaxHp = 150
 		c.Hp = c.MaxHp / 2
+		c.Attaque = 40
 		c.Inv = map[string]int{"Shotgun": 1, "Shotgun shells": 9}
 	case "???":
 		c.Level = 1
 		c.MaxHp = 1
 		c.Hp = 1
+		c.Attaque = 999
 		c.Inv = map[string]int{"Atomic": 999}
 	}
 }
-

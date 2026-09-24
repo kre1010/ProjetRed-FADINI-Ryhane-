@@ -15,5 +15,3 @@ func CocktailMolotov(c *character.Character) {
 	time.Sleep(1 * time.Second)
 	fmt.Println("Total : -30 Hp")
 }
-
-

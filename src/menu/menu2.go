@@ -50,7 +50,7 @@ func MenuJeu(player *character.Character) {
 			inventory.AccessInventory(player)
 
 		case 4:
-			
+
 			equipement.AfficherEquipement()
 
 		case 0:

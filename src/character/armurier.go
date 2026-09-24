@@ -45,7 +45,6 @@ func Armurier(c *Character) {
 	}
 }
 
-
 func CreeObjet(c *Character, nomObjet string, kevlar int, ceramic int, emplacement string) {
 	if c.Inv["Kevlar"] < kevlar {
 		fmt.Println("Pas assez de Kevlar.")
