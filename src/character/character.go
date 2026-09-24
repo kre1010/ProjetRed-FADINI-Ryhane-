@@ -14,6 +14,7 @@ type Character struct {
 	MaxInv int
 	Argent int
 	skill []string
+	Attaque int 
 }
 
 func (c *Character) MenuInitCharacter() {
@@ -54,8 +55,9 @@ func (c *Character) InitCharacter(name string, class int) {
 
 	case 1:
 		c.Level = 1
-		c.MaxHp = 150
+		c.MaxHp = 100
 		c.Hp = c.MaxHp / 2
+		c.Attaque = 50 
 		c.Inv = map[string]int{
 			"Sniper Rifle":   1,
 			"Heavy Bullets": 7,
@@ -66,6 +68,7 @@ func (c *Character) InitCharacter(name string, class int) {
 		c.Level = 1
 		c.MaxHp = 130
 		c.Hp = c.MaxHp / 2
+		c.Attaque = 30
 		c.Inv = map[string]int{
 			"Assault Rifle":  1,
 			"Medium bullets": 44,
@@ -76,6 +79,7 @@ func (c *Character) InitCharacter(name string, class int) {
 		c.Level = 1
 		c.MaxHp = 150
 		c.Hp = c.MaxHp / 2
+		c.Attaque = 40
 		c.Inv = map[string]int{
 			"Shotgun":        1,
 			"Shotgun shells": 9,

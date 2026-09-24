@@ -3,15 +3,9 @@ package menu
 import (
 	"fmt"
 	"os"
-	"os/exec"
 	"red/src/sounds"
+	"red/src/utils"
 )
-
-func Nettoyer() {
-    cmd := exec.Command("cmd", "/c", "cls")
-    cmd.Stdout = os.Stdout
-    cmd.Run()
-}
 
 func Menu() {	
 	fmt.Println("\033[31m")
@@ -60,16 +54,16 @@ func Menu() {
 	switch choix {
 	case 0:
 		sounds.StopFlash()
-		Nettoyer()
+		utils.Nettoyer()
 		fmt.Println("Fermeture de KOTW...")
 		os.Exit(0)
 
 	case 1:
-		Nettoyer()
+		utils.Nettoyer()
 		NouvellePartie()
 
 	case 2:
-		Nettoyer()
+		utils.Nettoyer()
 		fmt.Println("\033[32m")
 		fmt.Println("============== OPTIONS ==============")
 		fmt.Println()
@@ -85,7 +79,7 @@ func Menu() {
 		
 
 	case 3:
-		Nettoyer()
+		utils.Nettoyer()
 		fmt.Println("\033[32m")
 		fmt.Println("=============== CRÉDIT ===============")
 		fmt.Println()

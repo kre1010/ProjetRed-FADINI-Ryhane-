@@ -17,7 +17,16 @@ renoncer au combat et raconter l'histoire des autres?
 `, utils.NormalDelay)
 
 	fmt.Println("Appuyer sur entrée pour continuer...")
-	
+	fmt.Scanln()
+	fmt.Scanln()
+	utils.Nettoyer()
+	Training()
+
+}
+
+func Training(){
+//	initOperateur(operateur["Agent d'entrainement"])
+	fmt.Println("Bonjour !")
 
 }
 

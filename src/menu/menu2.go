@@ -3,11 +3,12 @@ package menu
 import (
 	"fmt"
 
-	jouer "red/src/Jouer"
+	"red/src/Jouer"
 	"red/src/character"
 	"red/src/equipement"
 	"red/src/inventory"
 	"red/src/sounds"
+	"red/src/utils"
 )
 
 func NouvellePartie() {
@@ -21,7 +22,7 @@ func NouvellePartie() {
 
 func MenuJeu(player *character.Character) {
 	for {
-		Nettoyer()
+		utils.Nettoyer()
 
 		fmt.Println("\033[35m")
 		fmt.Println("========================================")
@@ -42,7 +43,7 @@ func MenuJeu(player *character.Character) {
 		fmt.Print("Choix : ")
 		fmt.Scan(&choix)
 
-	Nettoyer()	
+	utils.Nettoyer()	
 		switch choix {
 		case 1:
 			jouer.Intro()
