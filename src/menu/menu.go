@@ -24,8 +24,29 @@ func Menu() {
 		╚═╝  ╚═╝   ╚═════╝     ╚═╝     ╚══╝╚══╝
 
 	                    	KOTW
-`)
+	`)
 
+	fmt.Println("\033[1;31m" + `
+               /////'
+              '  # o
+              C   - |
+ ___          '  =__'        ___
+(\ _ \_       |   |        _/  ')
+ \  (__\  ,---- _ |----.  /__)- |
+  \__  ( (           /  ) )  __/
+    |_X_\/ \.   #  _.|  \/_X_|
+      |  \ /(   /    /\ /  |
+       \ /  (  ,    /  \ _/
+            /______/
+           [:::::::]
+          /*%*%*%*%*\
+          >%*%#%*%*%|
+         /%*%*#*%*%*\
+        ######^#######
+` + "\033[0m")
+
+
+	sounds.PlayFlash()
 	fmt.Println("\033[33m")
 	fmt.Println("0. Quitter")
 	fmt.Println("1. Nouvelle Partie")
@@ -38,9 +59,9 @@ func Menu() {
 
 	switch choix {
 	case 0:
+		sounds.StopFlash()
 		Nettoyer()
 		fmt.Println("Fermeture de KOTW...")
-		sounds.StopFlash()
 		os.Exit(0)
 
 	case 1:

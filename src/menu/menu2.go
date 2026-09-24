@@ -6,6 +6,7 @@ import (
 	"red/src/character"
 	"red/src/equipement"
 	"red/src/inventory"
+	"red/src/sounds"
 )
 
 func NouvellePartie() {
@@ -70,6 +71,7 @@ func MenuJeu(player *character.Character) {
 			fmt.Scanln()
 
 		case 0:
+			sounds.StopFlash()
 			Menu()
 			return
 
