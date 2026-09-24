@@ -20,7 +20,6 @@ var Equip = Equipement{
 
 func AfficherEquipement() {
 	fmt.Println("========== ÉQUIPEMENT ==========")
-
 	fmt.Println("Tête :")
 	fmt.Println(Equip.Tête)
 	fmt.Println("Torse :")
@@ -31,6 +30,9 @@ func AfficherEquipement() {
 	fmt.Println(Equip.Mains)
 	fmt.Println("Pieds :")
 	fmt.Println(Equip.Pieds)
+	fmt.Println("=================================")
+	fmt.Println()
+	fmt.Println("Appuyer sur entrée pour revenir...")
 }
 
 
