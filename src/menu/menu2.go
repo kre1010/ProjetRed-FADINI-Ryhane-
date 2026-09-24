@@ -21,6 +21,7 @@ func MenuJeu(player *character.Character) {
 	for {
 		Nettoyer()
 
+		fmt.Println("\033[35m")
 		fmt.Println("========================================")
 		fmt.Println("                  KOTW")
 		fmt.Println("========================================")
@@ -33,6 +34,7 @@ func MenuJeu(player *character.Character) {
 		fmt.Println("6. Armurier")
 		fmt.Println("0. Retour")
 		fmt.Println()
+		fmt.Println("========================================")
 
 		var choix int
 		fmt.Print("Choix : ")

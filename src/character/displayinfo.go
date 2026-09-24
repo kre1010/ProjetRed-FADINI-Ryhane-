@@ -12,6 +12,9 @@ func ShowCharacterInfo(c *Character) {
 	fmt.Printf("\t class : %d\n", c.Class)
 	fmt.Printf("\t level : %d\n", c.Level)
 	fmt.Printf("\t HP : %d/%d\n", c.Hp, c.MaxHp)
+	for _, s := range c.skill {
+		fmt.Println("Skill", s)
+	}
 	fmt.Printf("\t Eddies : %d\n", c.Argent)
 	fmt.Println("===========================================")
 	fmt.Println("Appuyer sur entrée pour revenir...")
