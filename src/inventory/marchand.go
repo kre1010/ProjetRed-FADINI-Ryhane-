@@ -108,6 +108,12 @@ func Marchand(c *character.Character) {
 			if c.AcheterObjet("Cocktail Molotov", 20) {
 				c.Inv["Cocktail Molotov"]++
 			}
+		
+		case 12:
+			if c.AcheterObjet("Augmentation d'Inventaire", 50) {
+				c.MaxInv += 10
+				fmt.Println("Votre inventaire a été augmenté de 10 places !")
+			}
 
 		default:
 			fmt.Println("Choix invalide.")
@@ -127,13 +133,14 @@ func AfficherMarchand(c *character.Character) {
 	fmt.Println("5. Medium Bullets : 15 Eddies")
 	fmt.Println("6. Shotgun Shells : 15 Eddies")
 	fmt.Println("7. Potion de soin : GRATUIT !")
-	fmt.Println("8. Sac : 5 Eddies")
-	fmt.Println("9. Céramic : 10 Eddies")
-	fmt.Println("10. Grenade : 25 Eddies")
-	fmt.Println("11. MedKit : 15 Eddies")
-	fmt.Println("12. Cocktail Molotov : 20 Eddies")
+	fmt.Println("8. Céramic : 10 Eddies")
+	fmt.Println("9. Grenade : 25 Eddies")
+	fmt.Println("10. MedKit : 15 Eddies")
+	fmt.Println("11. Cocktail Molotov : 20 Eddies")
+	fmt.Println("12. Augmentation d'Inventaire : 50 Eddies")
 	fmt.Println("==============================")
 }
+
 
 
 

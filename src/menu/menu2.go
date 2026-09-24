@@ -3,9 +3,12 @@ package menu
 import (
 	"fmt"
 
+	"red/src/Jouer"
 	"red/src/character"
 	"red/src/equipement"
 	"red/src/inventory"
+	"red/src/sounds"
+	"red/src/utils"
 )
 
 func NouvellePartie() {
@@ -19,8 +22,9 @@ func NouvellePartie() {
 
 func MenuJeu(player *character.Character) {
 	for {
-		Nettoyer()
+		utils.Nettoyer()
 
+		fmt.Println("\033[35m")
 		fmt.Println("========================================")
 		fmt.Println("                  KOTW")
 		fmt.Println("========================================")
@@ -33,15 +37,18 @@ func MenuJeu(player *character.Character) {
 		fmt.Println("6. Armurier")
 		fmt.Println("0. Retour")
 		fmt.Println()
+		fmt.Println("========================================")
 
 		var choix int
 		fmt.Print("Choix : ")
 		fmt.Scan(&choix)
 
-	Nettoyer()	
+	utils.Nettoyer()	
 		switch choix {
 		case 1:
-			fmt.Println("Jouer")
+			jouer.Intro()
+			fmt.Scanln()
+			fmt.Scanln()
 
 		case 2:
 			character.ShowCharacterInfo(player)
@@ -58,7 +65,6 @@ func MenuJeu(player *character.Character) {
 			fmt.Scanln()
 
 		case 5:
-			inventory.AfficherMarchand(player)
 			inventory.Marchand(player)
 			fmt.Scanln()
 			fmt.Scanln()
@@ -69,6 +75,7 @@ func MenuJeu(player *character.Character) {
 			fmt.Scanln()
 
 		case 0:
+			sounds.StopFlash()
 			Menu()
 			return
 

@@ -3,16 +3,12 @@ package menu
 import (
 	"fmt"
 	"os"
-	"os/exec"
+	"red/src/sounds"
+	"red/src/utils"
 )
 
-func Nettoyer() {
-    cmd := exec.Command("cmd", "/c", "cls")
-    cmd.Stdout = os.Stdout
-    cmd.Run()
-}
-
-func Menu() {
+func Menu() {	
+	fmt.Println("\033[31m")
 	fmt.Println(`
 		██╗  ██╗   ██████╗  ████████╗ ██╗    ██╗
 		██║ ██╔╝  ██╔═══██╗ ╚══██╔══╝ ██║    ██║
@@ -22,8 +18,30 @@ func Menu() {
 		╚═╝  ╚═╝   ╚═════╝     ╚═╝     ╚══╝╚══╝
 
 	                    	KOTW
-`)
+	`)
 
+	fmt.Println("\033[1;31m" + `
+               /////'
+              '  # o
+              C   - |
+ ___          '  =__'        ___
+(\ _ \_       |   |        _/  ')
+ \  (__\  ,---- _ |----.  /__)- |
+  \__  ( (           /  ) )  __/
+    |_X_\/ \.   #  _.|  \/_X_|
+      |  \ /(   /    /\ /  |
+       \ /  (  ,    /  \ _/
+            /______/
+           [:::::::]
+          /*%*%*%*%*\
+          >%*%#%*%*%|
+         /%*%*#*%*%*\
+        ######^#######
+` + "\033[0m")
+
+
+	sounds.PlayFlash()
+	fmt.Println("\033[33m")
 	fmt.Println("0. Quitter")
 	fmt.Println("1. Nouvelle Partie")
 	fmt.Println("2. Options")
@@ -35,16 +53,18 @@ func Menu() {
 
 	switch choix {
 	case 0:
-		Nettoyer()
+		sounds.StopFlash()
+		utils.Nettoyer()
 		fmt.Println("Fermeture de KOTW...")
 		os.Exit(0)
 
 	case 1:
-		Nettoyer()
+		utils.Nettoyer()
 		NouvellePartie()
 
 	case 2:
-		Nettoyer()
+		utils.Nettoyer()
+		fmt.Println("\033[32m")
 		fmt.Println("============== OPTIONS ==============")
 		fmt.Println()
 		fmt.Println("1. Son")
@@ -55,16 +75,25 @@ func Menu() {
 		fmt.Scanln()
 		fmt.Scanln()
 
+		Menu()
+		
+
 	case 3:
-		Nettoyer()
+		utils.Nettoyer()
+		fmt.Println("\033[32m")
 		fmt.Println("=============== CRÉDIT ===============")
 		fmt.Println()
 		fmt.Println("KOTW")
-		fmt.Println("Créé en Go")
+		fmt.Println("Créé en Go par Sami ABIROU, Ryhane FADINI et Killian MORETTE")
+		fmt.Println("Avec l'aide de CYRIL, LILIAN et VITO")
 		fmt.Println()
-		fmt.Println("Appuie sur Entrée pour revenir...")
+		fmt.Println("======================================")
+		fmt.Println()
+		fmt.Println("Appuie sur Entrée pour revenir au menu...")
 		fmt.Scanln()
 		fmt.Scanln()
+
+		Menu()
 
 	default:
 		fmt.Println("Choix invalide.")

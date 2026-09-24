@@ -12,7 +12,6 @@ func Armurier(c *Character) {
 	fmt.Println("3. pantalon renforcé crye precision g4 - 4 Kevlar, 3 céramic ")
 	fmt.Println("4. gants Oakley SI - 1 Kevlar, 1 céramic")
 	fmt.Println("5. 0m bottes Salomon Forces - 2 Kevlar, 2 céramic")
-	fmt.Println("6. Augmentation d'inventaire - 50 eddie")
 	fmt.Println("0. Quitter l'armurier")
 
 	var choix int
@@ -34,9 +33,6 @@ func Armurier(c *Character) {
 
 	case 5:
 		CreeObjet(c, "Bottes Salomon Forces", 2, 2, "Pieds")
-	
-	case 6:
-		c.AcheterObjet("Augmentation d'inventaire", 50)
 
 	case 0:
 		fmt.Println("Tu quittes l'armurerie.")
@@ -46,30 +42,39 @@ func Armurier(c *Character) {
 	}
 }
 
-
 func CreeObjet(c *Character, nomObjet string, kevlar int, ceramic int, emplacement string) {
 	if equipement.Equip.Tête[nomObjet] == 1 {
 		fmt.Println("Vous possédez déjà l'équipement")
+		c.Hp += 20
+		c.MaxHp += 20
 		return
 	}
 
 	if equipement.Equip.Torse[nomObjet] == 1 {
 		fmt.Println("Vous possédez déjà l'équipement")
+		c.Hp += 25
+		c.MaxHp += 25
 		return
 	}
 
 	if equipement.Equip.Jambe[nomObjet] == 1 {
 		fmt.Println("Vous possédez déjà l'équipement")
+		c.Hp += 15
+		c.MaxHp += 15
 		return
 	}
 
 	if equipement.Equip.Mains[nomObjet] == 1 {
 		fmt.Println("Vous possédez déjà l'équipement")
+		c.Hp += 5
+		c.MaxHp += 5
 		return
 	}
 
 	if equipement.Equip.Pieds[nomObjet] == 1 {
 		fmt.Println("Vous possédez déjà l'équipement")
+		c.Hp += 10
+		c.MaxHp += 10
 		return
 	}
 

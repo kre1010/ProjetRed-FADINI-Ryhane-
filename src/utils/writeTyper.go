@@ -10,8 +10,9 @@ const (
 )
 
 func WriteTyper(str string, delay int) {
+	fmt.Println("\033[37m")
 	for _, char := range str {
-		fmt.Print(char)
-		time.Sleep(time.Duration(delay) * time.Microsecond)
+		fmt.Print(string(char))
+		time.Sleep(time.Duration(delay) * time.Millisecond)
 	}
 }
