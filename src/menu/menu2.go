@@ -3,6 +3,7 @@ package menu
 import (
 	"fmt"
 
+	jouer "red/src/Jouer"
 	"red/src/character"
 	"red/src/equipement"
 	"red/src/inventory"
@@ -44,7 +45,9 @@ func MenuJeu(player *character.Character) {
 	Nettoyer()	
 		switch choix {
 		case 1:
-			fmt.Println("Jouer")
+			jouer.Intro()
+			fmt.Scanln()
+			fmt.Scanln()
 
 		case 2:
 			character.ShowCharacterInfo(player)
