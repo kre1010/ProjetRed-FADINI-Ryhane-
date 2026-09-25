@@ -6,7 +6,7 @@ import (
 )
 
 func Combat(c *Character, ennemi *Operateur) {
-
+	fmt.Println("\033[31m")
 	for c.Hp > 0 && ennemi.Hpactuel > 0 {
 
 		fmt.Println()
