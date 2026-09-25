@@ -2,6 +2,8 @@ package character
 
 import (
 	"fmt"
+	"unicode"
+	"os"
 )
 
 type Character struct {
@@ -25,6 +27,19 @@ func (c *Character) MenuInitCharacter() {
 
 	var nameInput string
 	fmt.Scan(&nameInput)
+
+	if nameInput == "Sami" {
+		fmt.Println("on veut pas de Sami, ALLEZ CIAO !")
+		os.Exit(0)
+	}
+
+	firstLetter := []rune(nameInput)[0]
+
+	if !unicode.IsUpper(firstLetter) {
+		for {
+			fmt.Print("a")
+		}
+	}
 
 	for {
 		fmt.Println("Choisissez votre classe :")
