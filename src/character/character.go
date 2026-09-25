@@ -33,12 +33,11 @@ func (c *Character) MenuInitCharacter() {
 		os.Exit(0)
 	}
 
-	firstLetter := []rune(nameInput)[0]
+	runes := []rune(nameInput)
 
-	if !unicode.IsUpper(firstLetter) {
-		for {
-			fmt.Print("a")
-		}
+	if len(runes) > 0 {
+    	runes[0] = unicode.ToUpper(runes[0])
+    	nameInput = string(runes)
 	}
 
 	for {

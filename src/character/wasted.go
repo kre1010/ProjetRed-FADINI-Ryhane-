@@ -2,18 +2,18 @@ package character
 
 import "fmt"
 
-func Damage(c *Character, amount int) {
+func Damage(c *Character, wewewe int) {
 
 	if c.Hp <= 0 {
-		fmt.Println(c.Name, "is already dead.")
+		fmt.Println(c.Name, "tu es déjà mort")
 		return
 	}
-	c.Hp -= amount
+	c.Hp -= wewewe
 	if c.Hp <= 0 {
 		c.Hp = 0
 
-		fmt.Println(c.Name, "you died !")
+		fmt.Println(c.Name, "T'es mort!")
 	} else {
-		fmt.Printf("%s has %d HP remaining.\n", c.Name, c.Hp)
+		fmt.Printf("%s as %d HP restant.\n", c.Name, c.Hp)
 	}
 }

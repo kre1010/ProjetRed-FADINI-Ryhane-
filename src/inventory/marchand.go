@@ -33,53 +33,48 @@ func Marchand(c *character.Character) {
 			}
 
 		case 3:
-			if c.AcheterObjet("Bandage", 10) {
-				c.Inv["Bandage"]++
-			}
-
-		case 4:
 			if c.AcheterObjet("Heavy Bullets", 4) {
 				c.Inv["Heavy Bullets"]++
 			}
 
-		case 5:
+		case 4:
 			if c.AcheterObjet("Medium Bullets", 3) {
 				c.Inv["Medium Bullets"]++
 			}
 
-		case 6:
+		case 5:
 			if c.AcheterObjet("Shotgun Shells", 2) {
 				c.Inv["Shotgun Shells"]++
 			}
 
-		case 7:
-			if c.Inv["Potion de Soin"] > 0 {
+		case 6:
+			if c.Inv["Bandage"] > 0 {
 				fmt.Println("Vous avez déjà récupéré la Potion de Soin gratuite.")
 			} else {
-				c.Inv["Potion de Soin"]++
+				c.Inv["Bandage"]++
 				fmt.Println("Vous recevez une Potion de Soin gratuitement !")
 			}
-		case 8:
+		case 7:
 			if c.AcheterObjet("Céramic", 10) {
 				c.Inv["Céramic"]++
 			}
 
-		case 9:
+		case 8:
 			if c.AcheterObjet("Grenade", 30) {
 				c.Inv["Grenade"]++
 			}
 
-		case 10:
+		case 9:
 			if c.AcheterObjet("MedKit", 25) {
 				c.Inv["MedKit"]++
 			}
 
-		case 11:
+		case 10:
 			if c.AcheterObjet("Cocktail Molotov", 20) {
 				c.Inv["Cocktail Molotov"]++
 			}
 		
-		case 12:
+		case 11:
 			if c.AcheterObjet("Augmentation d'Inventaire", 50) {
 				c.MaxInv += 10
 				fmt.Println("Votre inventaire a été augmenté de 10 places !")
@@ -128,16 +123,15 @@ func AfficherMarchand(c *character.Character) {
 	fmt.Println("0. Quitter")
 	fmt.Println("1. Kevlar : 8 Eddies")
 	fmt.Println("2. Canon Long : 20 Eddies")
-	fmt.Println("3. Bandage : 10 Eddies")
-	fmt.Println("4. Heavy Bullets : 4 Eddies")
-	fmt.Println("5. Medium Bullets : 3 Eddies")
-	fmt.Println("6. Shotgun Shells : 2 Eddies")
-	fmt.Println("7. Potion de soin : GRATUIT !")
-	fmt.Println("8. Céramic : 10 Eddies")
-	fmt.Println("9. Grenade : 30 Eddies")
-	fmt.Println("10. MedKit : 25 Eddies")
-	fmt.Println("11. Cocktail Molotov : 20 Eddies")
-	fmt.Println("12. Augmentation d'Inventaire : 50 Eddies")
+	fmt.Println("3. Heavy Bullets : 4 Eddies")
+	fmt.Println("4. Medium Bullets : 3 Eddies")
+	fmt.Println("5. Shotgun Shells : 2 Eddies")
+	fmt.Println("6. Potion de soin : GRATUIT !")
+	fmt.Println("7. Céramic : 10 Eddies")
+	fmt.Println("8. Grenade : 30 Eddies")
+	fmt.Println("9. MedKit : 25 Eddies")
+	fmt.Println("10. Cocktail Molotov : 20 Eddies")
+	fmt.Println("11. Augmentation d'Inventaire : 50 Eddies")
 	fmt.Println("==============================")
 }
 

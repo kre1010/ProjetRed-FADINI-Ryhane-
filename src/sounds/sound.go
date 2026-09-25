@@ -28,6 +28,17 @@ func PlayCombat() {
 	soundProcess.Start()
 }
 
+func PlayHein() {
+	soundProcess = exec.Command(
+		"powershell",
+		"-NoProfile",
+		"-Command",
+		`$player = New-Object System.Media.SoundPlayer ".\oh.wav"; $player.PlaySync()`,
+	)
+
+	soundProcess.Start()
+}
+
 func StopMenu() {
 	if soundProcess != nil && soundProcess.Process != nil {
 		soundProcess.Process.Kill()

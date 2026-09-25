@@ -7,6 +7,7 @@ import (
 	"red/src/inventory"
 	"red/src/sounds"
 	"red/src/utils"
+	"time"
 )
 
 func Intro(c *character.Character) {
@@ -44,6 +45,8 @@ Arriverez-vous à trouver votre place, écrire l'histoire en évitant une mort s
 	fmt.Println()
 	fmt.Println("Entraînement terminé !")
 	fmt.Println("Vous êtes maintenant prêt pour le KOTW.")
+
+	time.Sleep(2 * time.Second)
 
 	Preparation(c)
 
@@ -100,6 +103,8 @@ Arriverez-vous à trouver votre place, écrire l'histoire en évitant une mort s
 		fmt.Println("+75 Eddies")
 		fmt.Println("Vous possédez maintenant", c.Argent, "Eddies.")
 
+		time.Sleep(2 * time.Second)
+
 		if i < len(ennemis)-1 {
 
 			fmt.Println()
@@ -153,6 +158,7 @@ func Preparation(c *character.Character) {
 
 		case 1:
 			utils.Nettoyer()
+			sounds.PlayHein()
 			inventory.Marchand(c)
 
 			fmt.Println()
@@ -171,7 +177,6 @@ func Preparation(c *character.Character) {
 
 		case 3:
 			utils.Nettoyer()
-
 			character.ShowCharacterInfo(c)
 
 			fmt.Scanln()
@@ -179,7 +184,6 @@ func Preparation(c *character.Character) {
 
 		case 4:
 			utils.Nettoyer()
-
 			inventory.AccessInventory(c)
 
 			fmt.Println()
@@ -189,7 +193,6 @@ func Preparation(c *character.Character) {
 
 		case 5:
 			utils.Nettoyer()
-
 			equipement.AfficherEquipement()
 
 			fmt.Scanln()
@@ -431,4 +434,5 @@ func CombatTales(c *character.Character) {
 		fmt.Println("Tales :", c.Inv["Tales"])
 	}
 }
+
 

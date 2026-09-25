@@ -3,9 +3,12 @@ package character
 import (
 	"fmt"
 	"math/rand"
+	"red/src/sounds"
 )
 
 func Combat(c *Character, ennemi *Operateur) {
+	sounds.StopMenu()
+	sounds.PlayCombat()
 	fmt.Println("\033[31m")
 	for c.Hp > 0 && ennemi.Hpactuel > 0 {
 
@@ -79,10 +82,12 @@ func Combat(c *Character, ennemi *Operateur) {
 			}
 
 			if ennemi.Hpactuel <= 0 {
+				sounds.StopMenu()
 				fmt.Println("Vous avez vaincu", ennemi.Nom, "!")
 				c.Argent += 75
 
-				fmt.Println("Vous gagnez 75 Eddies !")
+				fmt.Println("\033[33m"+"Vous gagnez 75 Eddies !")
+				fmt.Println("\033[31m")
 				fmt.Println("Eddies :", c.Argent)
 				return
 			}
@@ -103,7 +108,7 @@ func Combat(c *Character, ennemi *Operateur) {
 		case 3:
 
 			fmt.Println()
-			fmt.Println("1. Potion de Soin")
+			fmt.Println("1. Bandage")
 			fmt.Println("2. MedKit")
 			fmt.Println("3. Cocktail Molotov")
 			fmt.Println("4. Retour")
@@ -115,8 +120,8 @@ func Combat(c *Character, ennemi *Operateur) {
 			switch choixInv {
 
 			case 1:
-				if c.Inv["Potion de Soin"] <= 0 {
-					fmt.Println("Vous n'avez pas de Potion de Soin.")
+				if c.Inv["Bandage"] <= 0 {
+					fmt.Println("Vous n'avez pas de Bandage.")
 					continue
 				}
 
@@ -126,9 +131,9 @@ func Combat(c *Character, ennemi *Operateur) {
 					c.Hp = c.MaxHp
 				}
 
-				c.Inv["Potion de Soin"]--
+				c.Inv["Bandage"]--
 
-				fmt.Println("Potion utilisée.")
+				fmt.Println("Bandage utilisée.")
 				fmt.Println("HP :", c.Hp, "/", c.MaxHp)
 
 			case 2:
@@ -171,6 +176,7 @@ func Combat(c *Character, ennemi *Operateur) {
 				fmt.Println(c.Name, "perd aussi 30 HP.")
 
 				if ennemi.Hpactuel <= 0 {
+					sounds.StopMenu()
 					c.Level += 1
 					fmt.Println("Level:", c.Level)
 					fmt.Println("Vous avez vaincu", ennemi.Nom, "!")

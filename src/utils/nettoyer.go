@@ -6,6 +6,7 @@ import (
 )
 
 func Nettoyer() {
+
     cmd := exec.Command("cmd", "/c", "cls")
     cmd.Stdout = os.Stdout
     cmd.Run()
