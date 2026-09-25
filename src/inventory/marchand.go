@@ -126,7 +126,7 @@ func AfficherMarchand(c *character.Character) {
 	fmt.Println("3. Heavy Bullets : 4 Eddies")
 	fmt.Println("4. Medium Bullets : 3 Eddies")
 	fmt.Println("5. Shotgun Shells : 2 Eddies")
-	fmt.Println("6. Potion de soin : GRATUIT !")
+	fmt.Println("6. Bandage : GRATUIT !")
 	fmt.Println("7. Céramic : 10 Eddies")
 	fmt.Println("8. Grenade : 30 Eddies")
 	fmt.Println("9. MedKit : 25 Eddies")
